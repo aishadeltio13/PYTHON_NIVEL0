@@ -66,4 +66,4 @@ for edad in lista_edades:
         print(f"Ejecución detenida por edad avanzada.")
         break
 
-#
+
