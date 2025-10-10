@@ -100,9 +100,9 @@ while contador < 6:
     a= input("Introduce un número ")
     try:
         if a.isdigit():
-            print(f'El numero es válido {a}, numero de intentos {contador}')
-            contador += 1
-            continue 
+            a= int(a)
+            print(f'El numero es válido {a} y es de tipo {type(a)}, numero de intentos {contador}')
+            break 
         else:
             print(f'No es un dígito, numero de intentos {contador}')
             contador += 1
@@ -120,16 +120,28 @@ while contador < 6:
 #         print("Esto no es un número")
 #     intento += 1
 
+# Forma 3:
+# contador = 1
+# while contador < 6:
+#     a = input("Introduce un número: ")
+#     try:
+#         a = int(a)  # Intentamos convertir directamente
+#         print(f"El número es válido: {a}, tipo: {type(a)}, intento {contador}")
+#         break
+#     except ValueError:
+#         print(f"Error: '{a}' no es un número válido. Intento {contador}")
+#     contador += 1
+
 
 # # PROGRAMACION ORIENTADA A OBJETOS
 
 # Definición de clases
-class Animal:
-    def __init__(self, nombre, edad):
-        self.nombre = nombre
-        self.edad = edad
+# class Animal:
+#     def __init__(self, nombre, edad):
+#         self.nombre = nombre
+#         self.edad = edad
 
-mi_animal = Animal("Fido", 5)
+# mi_animal = Animal("Fido", 5)
 
 
 
