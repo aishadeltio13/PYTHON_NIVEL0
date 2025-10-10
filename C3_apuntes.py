@@ -57,13 +57,72 @@
 # print("Fin del programa después del bucle.")
 
 # Ejercicio: Filtrado de Edades en una Lista
-lista_edades=[15, 22, 17, 30, 65, 45, 70, 19]
+# lista_edades=[15, 22, 17, 30, 65, 45, 70, 19]
 
-for edad in lista_edades:
-    if edad > 18 and edad < 65:
-        print(f"Edad {edad} es mayor de edad.")
-    elif edad >= 65:
-        print(f"Ejecución detenida por edad avanzada.")
-        break
+# print("Forma1:")
+# for edad in lista_edades:
+#     if edad > 18 and edad < 65:
+#         print(f"Edad {edad} es mayor de edad.")
+#     elif edad >= 65:
+#         print(f"Ejecución detenida por edad avanzada.")
+#         break
+
+# print("Forma2:")   
+# # Cuando queramos parar ponerlo lo primero 
+# for edad in lista_edades:
+#     if edad >= 65:
+#         print(f"Ejecución detenida por edad avanzada ", edad)
+#         break       
+#     elif edad >= 18:
+#         print(f"Edad {edad} es mayor de edad.")
+        
+# print("Forma3:")   
+# # Este código no funciona correctamente porque nos muestra el de 65
+# for edad in lista_edades:
+#     if edad >= 18:
+#         print(f"Edad {edad} es mayor de edad.")
+#     elif edad >= 65:
+#         print(f"Ejecución detenida por edad avanzada ", edad)
+#         break
+    
+
+# # Try / Except: si ocurre un error nos ejecuta la parte de except (localizar errores)
+# try:
+#     resultado = 10 / 0
+# except:
+#     print("Error!!")
+
+# Practica: utiliza lo aprendido hasta ahora
+
+# Forma 1
+contador = 1
+while contador < 5:
+    a= input("Introduce un número ")
+    try:
+        if a.isdigit():
+            print(f'El numero es válido {a}, numero de intentos {contador}')
+            contador += 1
+            continue 
+        else:
+            print(f'No es un dígito, numero de intentos {contador}')
+            contador += 1
+    except:
+        print('Error')
+        
+# Forma 2:
+# intento = 1
+# while intento <= 5:
+#     try:
+#         numero = int(input("Introduzca un número"))
+#         print("El número es válido")
+#         break
+#     except:
+#         print("Esto no es un número")
+#     intento += 1
+
+
+
+
+
 
 
