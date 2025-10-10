@@ -96,7 +96,7 @@
 
 # Forma 1
 contador = 1
-while contador < 5:
+while contador < 6:
     a= input("Introduce un número ")
     try:
         if a.isdigit():
@@ -119,6 +119,17 @@ while contador < 5:
 #     except:
 #         print("Esto no es un número")
 #     intento += 1
+
+
+# # PROGRAMACION ORIENTADA A OBJETOS
+
+# Definición de clases
+class Animal:
+    def __init__(self, nombre, edad):
+        self.nombre = nombre
+        self.edad = edad
+
+mi_animal = Animal("Fido", 5)
 
 
 
