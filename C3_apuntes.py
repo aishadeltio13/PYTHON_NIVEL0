@@ -298,10 +298,18 @@
 # from mismodulos.matematicas import PI, sumar
 
 # Practica
-from mismodulos.saludos import saludar, despedir
-nombre= "Aisha"
-saludar(nombre) # no puedo hacer nombre.saludar() , porque nombre es un str no un objeto
-despedir(nombre)
+# from mismodulos.saludos import saludar, despedir
+# nombre= "Aisha"
+# saludar(nombre) # no puedo hacer nombre.saludar() , porque nombre es un str no un objeto
+# despedir(nombre)
+
+# REQUEST
+import requests
+url = "https://jsonplaceholder.typicode.com/posts"
+
+response = requests.get(url) # nos da la informacion
+data = response.json() # convertimos los datos en una lista python (es como una traduccion)
+print("posts:", data)
 
 
 
