@@ -95,19 +95,19 @@
 # Practica: utiliza lo aprendido hasta ahora
 
 # Forma 1
-contador = 1
-while contador < 6:
-    a= input("Introduce un número ")
-    try:
-        if a.isdigit():
-            a= int(a)
-            print(f'El numero es válido {a} y es de tipo {type(a)}, numero de intentos {contador}')
-            break 
-        else:
-            print(f'No es un dígito, numero de intentos {contador}')
-            contador += 1
-    except:
-        print('Error')
+# contador = 1
+# while contador < 6:
+#     a= input("Introduce un número ")
+#     try:
+#         if a.isdigit():
+#             a= int(a)
+#             print(f'El numero es válido {a} y es de tipo {type(a)}, numero de intentos {contador}')
+#             break 
+#         else:
+#             print(f'No es un dígito, numero de intentos {contador}')
+#             contador += 1
+#     except:
+#         print('Error')
         
 # Forma 2:
 # intento = 1
@@ -135,13 +135,93 @@ while contador < 6:
 
 # # PROGRAMACION ORIENTADA A OBJETOS
 
-# Definición de clases
-# class Animal:
+# Repaso diccionarios 
+
+# mianimal1 ={
+#     "nombre":"Sasu",
+#     "edad":1
+# }
+# mianimal2 ={
+#     "nombre":"Neva",
+#     "edad":2
+# }
+# mianimal3 ={
+#     "nombre":"Simba",
+#     "edad":1
+# }
+
+# print(mianimal1["nombre"])
+
+# # Repaso diccionarios 
+
+# numeros= [1,2,3]
+# print(numeros[2])
+
+
+# # Definición de clases : En vez de crear varios diccionarios creamos una clase.
+
+# Clase 1:
+# self: referencia al objeto que estoy creando
+# class Animal: # en nombre de la clase la primera letra en mayúscula
 #     def __init__(self, nombre, edad):
 #         self.nombre = nombre
 #         self.edad = edad
+    
+#     def hacer_sonido(self): # una función que esta dentro de una clase se le llama método
+#         print("El animal hace un sonido genérico.")
 
-# mi_animal = Animal("Fido", 5)
+
+# mi_animal4 = Animal("Fido", 5) # creamos una instancia de la clase animal
+# mi_animal5 = Animal("Salva", 22)
+# mi_animal6 = Animal("Neva", 2)
+
+# print(f"Mi animal se llama {mi_animal6.nombre} y tiene {mi_animal6.edad} años.")
+# mi_animal6.hacer_sonido()
+
+# Clase 2:
+# cls : hace referencia a la clase entera
+class Empleado:
+    sueldo_base = 50000 # propiedad 
+    
+    def __init__(self, nombre, cargo):
+        self.nombre = nombre
+        self.cargo = cargo
+    
+    @classmethod 
+    def aumentar_sueldo_base(cls, porcentaje):
+        cls.sueldo_base += 1000
+        print(f"El nuevo sueldo base es: {cls.sueldo_base}")
+        
+empleado1 = Empleado("Ana", "Gerente")
+print(f"Sueldo de {empleado1.nombre}: {Empleado.sueldo_base}")
+
+Empleado.aumentar_sueldo_base(10) # aumentamos el sueldo a todos los empleados creados despues el sueldo
+empleado2 = Empleado("Juan", "Peon")
+print(f"Sueldo de {empleado1.nombre}: {Empleado.sueldo_base}")
+
+
+# Clase 3:
+# class Matematica:
+#     @staticmethod
+#     def sumar(a, b):
+#         return a + b
+    
+#     @staticmethod
+#     def restar(a, b):
+#         return a - b
+    
+#     @staticmethod
+#     def multiplicar(a, b):
+#         return a * b
+
+# print(Matematica.sumar(5, 3))
+ 
+
+
+
+
+
+
 
 
 
