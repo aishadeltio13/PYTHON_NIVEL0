@@ -270,12 +270,12 @@ class Producto:
         print(f"El producto {self.nombre} tiene de precio {self.precio}")
         
 class Electrodomestico(Producto):
-    def __init__(self, nombre, precio, marca): 
+    def __init__(self, nombre, precio, marca):  # truco: si pones __init__ te deja seleccionar la opcion para que te deje crear todo
         super().__init__(nombre, precio) 
         self.marca = marca 
         
     def encender(self):
-        print("Encendiendo")
+        print("Encendiendo...")
     
 
 producto1= Producto('Ordenador','1000') 
@@ -286,7 +286,6 @@ producto2.mostrarDetalles()
 producto3 = Electrodomestico("IPAD","3000","APPLE")
 producto3.mostrarDetalles()
 producto3.encender()
-
 
 
 
