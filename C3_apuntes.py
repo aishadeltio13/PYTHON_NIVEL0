@@ -180,24 +180,24 @@
 
 # Clase 2:
 # cls : hace referencia a la clase entera
-class Empleado:
-    sueldo_base = 50000 # propiedad 
+# class Empleado:
+#     sueldo_base = 50000 # propiedad 
     
-    def __init__(self, nombre, cargo):
-        self.nombre = nombre
-        self.cargo = cargo
+#     def __init__(self, nombre, cargo):
+#         self.nombre = nombre
+#         self.cargo = cargo
     
-    @classmethod 
-    def aumentar_sueldo_base(cls, porcentaje):
-        cls.sueldo_base += 1000
-        print(f"El nuevo sueldo base es: {cls.sueldo_base}")
+#     @classmethod # utilizar este método cuando hemos definido una variable en la clase
+#     def aumentar_sueldo_base(cls):
+#         cls.sueldo_base += 1000
+#         print(f"El nuevo sueldo base es: {cls.sueldo_base}")
         
-empleado1 = Empleado("Ana", "Gerente")
-print(f"Sueldo de {empleado1.nombre}: {Empleado.sueldo_base}")
+# empleado1 = Empleado("Ana", "Gerente")
+# print(f"Sueldo de {empleado1.nombre}: {Empleado.sueldo_base}")
 
-Empleado.aumentar_sueldo_base(10) # aumentamos el sueldo a todos los empleados creados despues el sueldo
-empleado2 = Empleado("Juan", "Peon")
-print(f"Sueldo de {empleado1.nombre}: {Empleado.sueldo_base}")
+# Empleado.aumentar_sueldo_base() # aumentamos el sueldo a todos los empleados creados despues el sueldo
+# empleado2 = Empleado("Juan", "Peon")
+# print(f"Sueldo de {empleado1.nombre}: {Empleado.sueldo_base}")
 
 
 # Clase 3:
@@ -215,7 +215,22 @@ print(f"Sueldo de {empleado1.nombre}: {Empleado.sueldo_base}")
 #         return a * b
 
 # print(Matematica.sumar(5, 3))
- 
+
+# Ejercicio
+
+class Producto:
+    def __init__(self, nombre, precio):
+        self.nombre = nombre
+        self.precio = precio
+    
+    def mostrarDetalles(self): # una función que esta dentro de una clase se le llama método
+        print(f"El producto {self.nombre} tiene de precio {self.precio}")
+
+producto1= Producto('Ordenador','1000')
+producto2 = Producto('Movil','2000')
+
+producto1.mostrarDetalles()
+producto2.mostrarDetalles() 
 
 
 
