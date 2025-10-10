@@ -216,6 +216,49 @@
 
 # print(Matematica.sumar(5, 3))
 
+# Ejercicio:el nombre de la clase en mayusculas y cuando creamos un objeto en minusculas
+
+# class Producto:
+#     def __init__(self, nombre, precio):
+#         self.nombre = nombre
+#         self.precio = precio
+    
+#     def mostrarDetalles(self): # importante poner self en la creación del método
+#         print(f"El producto {self.nombre} tiene de precio {self.precio}")
+
+# producto1= Producto('Ordenador','1000') 
+# producto2 = Producto('Movil','2000')
+
+# producto1.mostrarDetalles()
+# producto2.mostrarDetalles() 
+
+# # HERENCIA: creamos una clase hija a partir de una clase que ya hemos creado (de esta forma no repetimos el codigo)
+
+# class Animal: 
+#     def __init__(self, nombre):
+#         self.nombre = nombre
+    
+#     def hacer_sonido(self):
+#         print("El animal hace un sonido genérico.")
+
+# class Perro(Animal): # creamos una clase hija 
+#     def __init__(self, nombre, raza): # añadimos las mismas propiedades + las propiedades de la nueva clase
+#         super().__init__(nombre) # llamamos a las propiedades de la clase padre
+#         self.raza = raza # y ya luego añadimos las nuevas propiedades
+        
+#     # def hacer_sonido(self): # podemos sobreescribir el método de la clase padre o crear directamente un metodo nuevo
+#     #     print("El perro ladra: ¡Guau!")
+        
+#     def hacer_sonido(self): 
+#         super().hacer_sonido() # me mantiene el código del método padre 
+#         print("Esto es el metodo del perro")
+
+# animal_generico = Animal("Tommy")
+# animal_generico.hacer_sonido() 
+# perro = Perro("Tommy","husky")
+# perro.hacer_sonido()
+
+
 # Ejercicio
 
 class Producto:
@@ -223,14 +266,28 @@ class Producto:
         self.nombre = nombre
         self.precio = precio
     
-    def mostrarDetalles(self): # una función que esta dentro de una clase se le llama método
+    def mostrarDetalles(self): # importante poner self en la creación del método
         print(f"El producto {self.nombre} tiene de precio {self.precio}")
+        
+class Electrodomestico(Producto):
+    def __init__(self, nombre, precio, marca): 
+        super().__init__(nombre, precio) 
+        self.marca = marca 
+        
+    def encender(self):
+        print("Encendiendo")
+    
 
-producto1= Producto('Ordenador','1000')
+producto1= Producto('Ordenador','1000') 
 producto2 = Producto('Movil','2000')
-
 producto1.mostrarDetalles()
 producto2.mostrarDetalles() 
+
+producto3 = Electrodomestico("IPAD","3000","APPLE")
+producto3.mostrarDetalles()
+producto3.encender()
+
+
 
 
 
