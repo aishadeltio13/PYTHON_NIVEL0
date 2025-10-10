@@ -261,31 +261,51 @@
 
 # Ejercicio
 
-class Producto:
-    def __init__(self, nombre, precio):
-        self.nombre = nombre
-        self.precio = precio
+# class Producto:
+#     def __init__(self, nombre, precio):
+#         self.nombre = nombre
+#         self.precio = precio
     
-    def mostrarDetalles(self): # importante poner self en la creación del método
-        print(f"El producto {self.nombre} tiene de precio {self.precio}")
+#     def mostrarDetalles(self): # importante poner self en la creación del método
+#         print(f"El producto {self.nombre} tiene de precio {self.precio}")
         
-class Electrodomestico(Producto):
-    def __init__(self, nombre, precio, marca):  # truco: si pones __init__ te deja seleccionar la opcion para que te deje crear todo
-        super().__init__(nombre, precio) 
-        self.marca = marca 
+# class Electrodomestico(Producto):
+#     def __init__(self, nombre, precio, marca):  # truco: si pones __init__ te deja seleccionar la opcion para que te deje crear todo
+#         super().__init__(nombre, precio) 
+#         self.marca = marca 
         
-    def encender(self):
-        print("Encendiendo...")
+#     def encender(self):
+#         print("Encendiendo...")
     
 
-producto1= Producto('Ordenador','1000') 
-producto2 = Producto('Movil','2000')
-producto1.mostrarDetalles()
-producto2.mostrarDetalles() 
+# producto1= Producto('Ordenador','1000') 
+# producto2 = Producto('Movil','2000')
+# producto1.mostrarDetalles()
+# producto2.mostrarDetalles() 
 
-producto3 = Electrodomestico("IPAD","3000","APPLE")
-producto3.mostrarDetalles()
-producto3.encender()
+# producto3 = Electrodomestico("IPAD","3000","APPLE")
+# producto3.mostrarDetalles()
+# producto3.encender()
+
+# # MODULOS:
+
+# Modulos propios
+# import mismodulos.matematicas as matematicas # matematicas.sumar
+# from mismodulos.matematicas import PI, sumar
+# from mismodulos.matematicas import *  # cuidado con el * --> si importamos dos variables que se llaman igual, el valor que se queda es del último que importamos
+# # si esta dentro de una carpeta
+# import mismodulos.matematicas as m
+# from mismodulos.matematicas import PI, sumar
+
+# Practica
+from mismodulos.saludos import saludar, despedir
+nombre= "Aisha"
+saludar(nombre) # no puedo hacer nombre.saludar() , porque nombre es un str no un objeto
+despedir(nombre)
+
+
+
+
 
 
 
